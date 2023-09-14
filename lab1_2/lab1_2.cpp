@@ -3,10 +3,11 @@
 #include <locale.h>
 #include <stdlib.h>
 #include <time.h>
+#include <windows.h>
 
 struct Student
 {
-    int num;
+    char num[5];
     char firstname[20];
     char name[20];
     char faculty[20];
@@ -18,7 +19,7 @@ int main()
     srand(time(NULL));
 
     //Задание 3 + Задание 5. Ввод массива произвольного размера и поиск структур
-   
+
     printf("Задание 3 + Задание 5. Ввод массива произвольного размера и поиск структур\n");
 
     int n;
@@ -30,7 +31,8 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        a[i].num = 100 + i;                             
+        //a[i].num = 100 + i; 
+        snprintf(a[i].num, 5, "%d", i);
         snprintf(a[i].firstname, 20, "Фамилия%d", i);
         snprintf(a[i].name, 20, "Имя%d", i);
         snprintf(a[i].faculty, 20, "Факультет%d", i);
@@ -38,28 +40,42 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        printf("%4d", a[i].num);
+        printf("%5s", a[i].num);
         printf("%15s", a[i].firstname);
         printf("%15s", a[i].name);
         printf("%20s", a[i].faculty);
         printf("\n");
     }
 
-    int m;
+    char m[5];
     printf("\n");
     printf("Введите номер зачетки: ");
-    scanf("%d", &m);
+    scanf("%s", m);
 
     for (int i = 0; i < n; i++)
     {
-        if (m == a[i].num)
+        if (strcmp(a[i].num, m) == 0)
         {
-            printf("%4d", a[i].num);
+            printf("%5s", a[i].num);
             printf("%15s", a[i].firstname);
             printf("%15s", a[i].name);
             printf("%20s", a[i].faculty);
             printf("\n");
         }
+    }
+
+    int l = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (strcmp(a[i].num, m) != 0)
+        {
+            l++;
+        }
+    }
+
+    if (l == n)
+    {
+        printf("Не существует такой зачетки ");
     }
 
     free(a);
