@@ -1,0 +1,4 @@
+﻿  lab 2.cpp
+C:\Projects\C\Logic\lab 2\lab 2.cpp(17,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Projects\C\Logic\lab 2\lab 2.cpp(27,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lab 2.vcxproj -> C:\Projects\C\Logic\lab 2\Debug\lab 2.exe

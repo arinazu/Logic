@@ -1,0 +1,2 @@
+C:\Projects\C\Logic\lab 2_2\x64\Debug\lab 2_2.exe
+d:\Logic1\Logic\lab 2_2\x64\Debug\lab 2_2.exe
