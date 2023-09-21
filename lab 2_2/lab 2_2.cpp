@@ -6,7 +6,6 @@
 #include <windows.h>
 #include <conio.h>
 
-
 void calc(int* a, int n);
 void shell(int* items, int count);
 void output(int* items, int count);
@@ -19,60 +18,71 @@ int main()
 	srand(time(NULL));
 
 	int N;
-	printf("Введите размер массива: ");
+	printf("Введите максимальный размер массива: ");
 	scanf("%d", &N);
 
-	int* A = (int*)malloc(sizeof(int) * N);
+	int y = N;
 
-	//Случайный набор значений массива А
-	for (int i = 0; i < N; i++)
+	for (int l = 0; l < 3; l++)
 	{
-		A[i] = rand() % 200 - 100;
-		//printf("%d ", A[i]);
-		//printf("\n");
-	}
-	printf("\n");
-	printf("Для массива из случайных чисел\n");
-	printf("\n");
-	calc(A, N);
-	printf("\n");
-	printf("\n");
+		N = y / (3 - l);
+		int* A = (int*)malloc(sizeof(int) * N);
 
-	//По возрастанию
-	for (int i = 0; i < N; i++)
-	{
-		A[i] = i*2 - N;
-	}
-	//output(A, N);
-	printf("Для возрастающей последовательности\n");
-	printf("\n");
-	calc(A, N);
-	printf("\n");
-	printf("\n");
+		//Случайный набор значений массива А
+		for (int i = 0; i < N; i++)
+		{
+			A[i] = rand() % 200 - 100;
+			//printf("%d ", A[i]);
+			//printf("\n");
+		}
+		printf("\n");
+		printf("Размер массива: %d\n", N);
+		printf("\n");
+		printf("Для массива из случайных чисел\n");
+		printf("\n");
+		calc(A, N);
+		printf("\n");
+		printf("\n");
 
-	//По убыванию
-	for (int i = 0; i < N; i++)
-	{
-		A[i] = -(i * 2 - N);
-	}
-	//output(A, N);
-	printf("Для убывающей последовательности\n");
-	printf("\n");
-	calc(A, N);
-	printf("\n");
-	printf("\n");
+		//По возрастанию
+		for (int i = 0; i < N; i++)
+		{
+			A[i] = i * 2 - N;
+		}
+		//output(A, N);
+		printf("Для возрастающей последовательности\n");
+		printf("\n");
+		calc(A, N);
+		printf("\n");
+		printf("\n");
 
-	//Половина убывает, половина возрастает
-	for (int i = 0; i < N; i++)
-	{
-		A[i] = abs(i * 2 - N);
-	}
-	//output(A, N);
-	printf("Для смешанной последовательности\n");
-	printf("\n");
-	calc(A, N);
+		//По убыванию
+		for (int i = 0; i < N; i++)
+		{
+			A[i] = -(i * 2 - N);
+		}
+		//output(A, N);
+		printf("Для убывающей последовательности\n");
+		printf("\n");
+		calc(A, N);
+		printf("\n");
+		printf("\n");
 
-	free(A);
+		//Половина убывает, половина возрастает
+		for (int i = 0; i < N; i++)
+		{
+			A[i] = abs(i * 2 - N);
+		}
+		//output(A, N);
+		printf("Для смешанной последовательности\n");
+		printf("\n");
+		calc(A, N);
+
+		printf("---------------------------------------------------------------------------------------------");
+		free(A);
+
+	}
+	
 	return 0;
 }
 
