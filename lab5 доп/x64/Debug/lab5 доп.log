@@ -1,0 +1,3 @@
+﻿  lab5 доп.cpp
+D:\Logic1\Logic\lab5 доп\lab5 доп.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lab5 доп.vcxproj -> D:\Logic1\Logic\lab5 доп\x64\Debug\lab5 доп.exe

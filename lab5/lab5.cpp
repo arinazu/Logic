@@ -50,27 +50,19 @@ int main() {
 	int count_smez = 0;
 
 	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
+		for (int j = i; j < size; j++) {
 			if (i == j) {
 				arr[i][j] = 0;
 			}
 
-			else if (i > j) {
-				arr[i][j] = arr[j][i];
-				//if (arr[i][j] == 1) {
-				//	count_smez++;
-				//}
-			}
-
 			else {
 				arr[i][j] = rand() % 2;
-				if (arr[i][j] == 1) {
-					count_smez++;
-				}
+				arr[j][i] = arr[i][j];
+				count_smez += arr[i][j];
 			}
+
 		}
 	}
-	//count_smez = count_smez / 2;
 
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
@@ -104,9 +96,9 @@ int main() {
 	int d = 0;
 
 	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
+		for (int j = i; j < size; j++) {
 
-			if ((arr[i][j] == 1) and (i < j)) {
+			if (arr[i][j] == 1) {
 				arr1[i][d] = 1;
 				arr1[j][d] = 1;
 				d++;
