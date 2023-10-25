@@ -1,0 +1,2 @@
+C:\Projects\C\Logic\lab4\x64\Debug\lab4.exe
+F:\Логика\lab4\lab4\x64\Debug\lab4.exe
