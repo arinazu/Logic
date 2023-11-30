@@ -1,0 +1,3 @@
+﻿  lab8.cpp
+F:\Логика\lab8\lab8.cpp(260,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lab8.vcxproj -> F:\Логика\lab8\x64\Debug\lab8.exe
