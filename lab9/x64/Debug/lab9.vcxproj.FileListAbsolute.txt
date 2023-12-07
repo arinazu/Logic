@@ -1,0 +1,3 @@
+F:\Логика\lab9\x64\Debug\lab9.exe
+E:\Логика\lab9\x64\Debug\lab9.exe
+d:\Logic1\Logic\lab9\x64\Debug\lab9.exe
