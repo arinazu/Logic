@@ -1,0 +1,3 @@
+C:\Projects\C\Logic\graph coloring\x64\Debug\graph coloring.exe
+F:\Логика\graph coloring\graph coloring\x64\Debug\graph coloring.exe
+e:\Логика\graph coloring\graph coloring\x64\Debug\graph coloring.exe
